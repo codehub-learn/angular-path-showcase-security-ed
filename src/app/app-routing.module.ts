@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: "jwt",
-    loadChildren: () => import("./simple-login/simple-login.module").then((m) => m.SimpleLoginModule)
+    loadChildren: () => import("./jwt/jwt.module").then((m) => m.JwtModule)
   }
 ];
 

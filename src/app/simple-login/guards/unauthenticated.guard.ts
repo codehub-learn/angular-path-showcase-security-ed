@@ -13,6 +13,7 @@ export class UnauthenticatedGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    console.log("hello 2")
     let isAuthenticated = this.authenticationService.isAuthenticated();
     if (isAuthenticated) {
       this.router.navigate(["simple-login", "home"]);
